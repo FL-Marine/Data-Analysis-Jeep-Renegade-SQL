@@ -47,3 +47,32 @@ FROM jeep_renegade.jeep_data;
 | Chrome            |
 | Internet Explorer |
 
+**Group By Counts**
+    WITH groupby_counts_example AS (
+      SELECT	
+      	new_date,
+      	country,
+      	visitor_type,
+      	form_name,
+      	form_start,
+      	form_completes,
+      	browser,
+      	channel
+      FROM jeep_renegade.jeep_data
+      LIMIT 10
+    )
+    SELECT
+    	channel,
+        COUNT(*) as channel_count
+    FROM groupby_counts_example
+    GROUP BY channel
+    ORDER BY channel_count DESC;
+
+| channel                                  | channel_count |
+| ---------------------------------------- | ------------- |
+| Other                                    | 4             |
+| Organic Search                           | 4             |
+| Auto Sites (Cars.com, Car & Drive, etc.) | 1             |
+| PPC                                      | 1             |
+
+
