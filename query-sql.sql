@@ -76,3 +76,17 @@ FROM jeep_renegade.jeep_data;
 | PPC                                      | 1             |
 
 
+**Single Column Value Counts**
+    SELECT
+    	country,
+        COUNT(*) AS frequency
+    FROM jeep_renegade.jeep_data
+    GROUP BY country;
+
+| country | frequency |
+| ------- | --------- |
+| Unknown | 7336      |
+| USA     | 12083     |
+| Canada  | 2515      |
+| India   | 1966      |
+
