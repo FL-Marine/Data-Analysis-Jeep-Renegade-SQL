@@ -109,6 +109,7 @@ ORDER BY frequency DESC;
 | Canada  | 2515      | 0.10523012552301255230 |
 | India   | 1966      | 0.08225941422594142259 |
 
+--  Percentage decimal is a bit ugly --
 
 SELECT
     	country,
@@ -127,7 +128,7 @@ SELECT
 | Canada  | 2515      | 10.52      |
 | India   | 1966      | 8.23       |
 
-/* Percentage decimal is a bit ugly. 
+/*
 Multiple percentage value by 100 and round it to 1 decimal place using ROUND function
 Note of the 100 * is used in the query below and notice the comma within the round brackets for the ROUND function.*/
 
