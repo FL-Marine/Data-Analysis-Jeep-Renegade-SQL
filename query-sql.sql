@@ -92,3 +92,5 @@ ORDER BY frequency DESC;
 | Canada  | 2515      |
 | India   | 1966      |
 
+**Adding a Percentage Column**
+
