@@ -132,3 +132,33 @@ SELECT
 Multiple percentage value by 100 and round it to 1 decimal place using ROUND function
 Note of the 100 * is used in the query below and notice the comma within the round brackets for the ROUND function.*/
 
+**Counts For Multiple Column Combinations**
+    SELECT
+    	channel,
+        form_name,
+        COUNT(*) AS frequency
+    FROM jeep_renegade.jeep_data
+    GROUP BY channel, form_name
+    ORDER BY frequency DESC;
+
+| channel                                  | form_name | frequency |
+| ---------------------------------------- | --------- | --------- |
+| Organic Search                           | NONE      | 3173      |
+| Other                                    | NONE      | 2792      |
+| Organic Search                           | FORM_B    | 2227      |
+| PPC                                      | NONE      | 2075      |
+| Auto Sites (Cars.com, Car & Drive, etc.) | NONE      | 2027      |
+| Organic Search                           | FORM_A    | 1855      |
+| Other                                    | FORM_B    | 1686      |
+| Other                                    | FORM_A    | 1591      |
+| PPC                                      | FORM_A    | 1227      |
+| Auto Sites (Cars.com, Car & Drive, etc.) | FORM_B    | 1207      |
+| Auto Sites (Cars.com, Car & Drive, etc.) | FORM_A    | 1121      |
+| PPC                                      | FORM_B    | 1093      |
+| Build & Price Tool                       | NONE      | 546       |
+| Direct Mail                              | NONE      | 528       |
+| Direct Mail                              | FORM_B    | 214       |
+| Build & Price Tool                       | FORM_B    | 212       |
+| Build & Price Tool                       | FORM_A    | 169       |
+| Direct Mail                              | FORM_A    | 157       |
+
