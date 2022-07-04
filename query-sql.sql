@@ -133,7 +133,8 @@ Multiple percentage value by 100 and round it to 1 decimal place using ROUND fun
 Note of the 100 * is used in the query below and notice the comma within the round brackets for the ROUND function.*/
 
 **Counts For Multiple Column Combinations**
-    SELECT
+   
+   SELECT
     	channel,
         form_name,
         COUNT(*) AS frequency
