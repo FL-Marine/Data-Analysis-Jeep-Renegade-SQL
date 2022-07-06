@@ -163,3 +163,21 @@ Note of the 100 * is used in the query below and notice the comma within the rou
 | Build & Price Tool                       | FORM_A    | 169       |
 | Direct Mail                              | FORM_A    | 157       |
 
+**Average & Counts of form_completes by country**
+
+    SELECT	
+    	country,
+        ROUND(AVG(form_completes),2) AS average,
+       	COUNT(*) AS counts
+    FROM jeep_renegade.jeep_data
+    GROUP BY country
+    ORDER BY counts;
+
+| country | average | counts |
+| ------- | ------- | ------ |
+| India   | 0.26    | 1966   |
+| Canada  | 0.31    | 2515   |
+| Unknown | 0.84    | 7336   |
+| USA     | 2.05    | 12083  |
+
+
