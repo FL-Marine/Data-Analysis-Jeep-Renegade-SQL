@@ -180,4 +180,17 @@ Note of the 100 * is used in the query below and notice the comma within the rou
 | Unknown | 0.84    | 7336   |
 | USA     | 2.05    | 12083  |
 
+**Mean, median, and mode of unique visitors**
+
+    SELECT	
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY unique_visitors) 
+        AS median_value,
+        MODE() WITHIN GROUP (ORDER BY unique_visitors) AS mode_value,
+        AVG(unique_visitors) AS mean_value
+    FROM jeep_renegade.jeep_data;
+
+| median_value | mode_value | mean_value          |
+| ------------ | ---------- | ------------------- |
+| 8            | 2          | 34.8031799163179916 |
+
 
