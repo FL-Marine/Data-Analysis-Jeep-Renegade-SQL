@@ -193,4 +193,7 @@ Note of the 100 * is used in the query below and notice the comma within the rou
 | ------------ | ---------- | ------------------- |
 | 8            | 2          | 34.8031799163179916 |
 
+**Min, Max & Range**
+
+
 
