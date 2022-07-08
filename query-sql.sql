@@ -193,7 +193,16 @@ Note of the 100 * is used in the query below and notice the comma within the rou
 | ------------ | ---------- | ------------------- |
 | 8            | 2          | 34.8031799163179916 |
 
-**Min, Max & Range**
+**Min, Max & Range - form_completes**
 
+    SELECT
+      MIN(form_completes) AS minimum_value,
+      MAX(form_completes) AS maximum_value,
+      MAX(form_completes) - MIN(form_completes) AS range_value
+    FROM jeep_renegade.jeep_data;
+
+| minimum_value | maximum_value | range_value |
+| ------------- | ------------- | ----------- |
+| 0             | 54            | 54          |
 
 
