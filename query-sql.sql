@@ -205,4 +205,18 @@ Note of the 100 * is used in the query below and notice the comma within the rou
 | ------------- | ------------- | ----------- |
 | 0             | 54            | 54          |
 
+**Window Fuction Multiple Calculations** 
+
+SELECT
+    	form_name,
+        COUNT(*) AS frequency,
+        SUM(COUNT(*)) OVER () AS total
+    FROM jeep_renegade.jeep_data
+    GROUP BY form_name;
+
+| form_name | frequency | total |
+| --------- | --------- | ----- |
+| NONE      | 11141     | 23900 |
+| FORM_A    | 6120      | 23900 |
+| FORM_B    | 6639      | 23900 |
 
